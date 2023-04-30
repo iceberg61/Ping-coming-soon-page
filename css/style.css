@@ -1,0 +1,120 @@
+
+ @import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+    --clr--Blue: hsl(223, 87%, 63%);
+    --clr--Pale-Blue: hsl(223, 100%, 88%);
+    --clr--Light-Red: hsl(354, 100%, 66%);
+    --clr--Gray: hsl(0, 0%, 59%);
+    --clr--Very-Dark-Blue: hsl(209, 33%, 12%);
+    --fontSize: 1.25rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    font-family: 'Libre Franklin', sans-serif;
+    display: flex;
+}
+
+section {
+    margin: 3rem  auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.heading-text {text-align: center;}
+
+.heading-text  h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-block: 3rem 1rem;
+}
+
+.heading-text  h1 span {font-weight: 700;}
+
+.heading-text p {font-size: 1rem;}
+
+form ,.form-field {
+    margin-block: 1rem 3rem;
+    width: 100%;
+    display: flex;
+}
+
+input[type="email"] {
+    width: 100%;
+    border: 1px solid var(--clr--Pale-Blue);
+    border-radius: 3rem;
+    padding: .8rem 2rem;
+    outline: none;
+    font-size: 1rem;
+}
+
+input[type="email"]::placeholder {color: var(--clr--Pale-Blue);}
+
+input[type="submit"] {
+    width: 50%;
+    margin-left: 1.3rem;
+    border-radius: 3rem;
+    border: none;
+    background-color: var(--clr--Blue);
+    color: #fff;
+    box-shadow: 1px 2px 4px 2px var(--clr--Pale-Blue);
+    cursor: pointer;
+}
+
+.form-field.error input[type="email"] {
+    border-color: var(--clr--Light-Red);
+}
+
+.form-field.success input[type="email"] {
+    border-color: var(--clr--Blue);
+}
+
+.form-field small {
+    padding-block-start: .5rem;
+    color: var(--clr--Light-Red);
+}
+
+.img-container img {
+    max-width: 100%;
+    margin-block: 2rem;
+    width: 30rem;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;   
+    align-items: center;
+}
+
+.social-media-icons a {
+    border: 1px solid var(--clr--Pale-Blue);
+    border-radius: 9rem;
+    padding: .4rem .5rem;
+    margin: 1rem;
+}
+
+.social-media-icons a:hover {background-color: var(--clr--Blue);}
+.social-media-icons a i {color: var(--clr--Blue);}
+.social-media-icons a i:hover {color: white;}
+.footer {color: var(--clr--Gray);font-size: .9rem;}
+
+@media (max-width: 467px) {
+    .heading-text  h1 {font-size: 2rem;}
+
+    form, .form-field {flex-direction: column; align-items: center; width: 90%;}
+    
+    input[type="submit"] {
+        width: 100%;
+        padding: .8rem 2rem;
+        margin: 1rem 0;
+    }
+}
