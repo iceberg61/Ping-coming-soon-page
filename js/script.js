@@ -10,11 +10,10 @@ function checkInput() {
    const emailValue =  inputEmail.value.trim();
 
    if (emailValue === '') {
-    console.log('empty')
-    setErrorFor(inputEmail, 'Email cannot be blank')
+    setErrorFor(inputEmail, 'Whoops! It looks like you forgot to add your email')
    } else if(!isEmail(emailValue)) {
     console.log('invalid')
-    setErrorFor(inputEmail, 'Email is not valid')
+    setErrorFor(inputEmail, 'Please provide a valid email address')
    } else {
     setSuccessFor(inputEmail)
    }
@@ -28,7 +27,6 @@ function setErrorFor(input, message) {
     small.innerText = message;
 
     formField.className = 'form-field error'
-    console.log(formField)
 }
 
 
