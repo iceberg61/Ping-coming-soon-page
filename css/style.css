@@ -121,15 +121,16 @@ input[type="submit"] {
 .social-media-icons a i:hover {color: white;}
 .footer {color: var(--clr--Gray);font-size: .9rem;}
 
-@media (max-width: 467px) {
+
+@media (max-width: 386px) {
+    section {margin: 3rem  auto;}
+
     .heading-text  h1 {font-size: 2rem;}
 
     form {
-        /* background-color: aqua; */
         flex-direction: column;  
         width: 90%;
         text-align: center;
-        /* width: ; */
     }
     
     input[type="email"] {width: 100%;}
